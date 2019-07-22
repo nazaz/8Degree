@@ -37,6 +37,9 @@
     font-size: 40px; } }
 
 @media screen and (max-width: 666px) {
+  .next,
+  .prev {
+    bottom: 60%; }
   .footer-box {
     width: 45%; }
   .footer-grid {
