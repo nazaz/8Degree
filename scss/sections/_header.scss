@@ -1,0 +1,224 @@
+// Header
+.header {
+    background-color: $white;
+}
+
+.top-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 15px 0px 13px;
+}
+
+.nav {
+    width: 100%;
+
+    &__logo {
+        width: 25%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__item {
+        display: flex;
+        text-transform: uppercase;
+        color: $dark-gray;
+
+        &:hover .sub-menu {
+            display: block;
+            opacity: 1;
+            transition: all ease 0.4s;
+        }
+
+        &:hover .sub-menu__blog {
+            display: block;
+            opacity: 1;
+        }
+
+        a {
+            color: $dark-gray;
+            padding: 0px 8px;
+            transition: all ease 0.4s;
+
+            &:hover {
+                color: $blue-vivaid;
+            }
+        }
+    }
+}
+
+i.fa-caret-down {
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+    padding: 0px;
+}
+
+.sub-menu {
+    @include sub-menu;
+    margin: 20px 0px 0px -10px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $white;
+
+        &:hover .sub-menu__link {
+            display: block;
+            opacity: 1;
+        }
+
+        &:hover .sub-menu__search {
+            display: block;
+            opacity: 1;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid $mostly-white;
+        }
+
+        a {
+            width: 100%;
+            padding: 15px 20px;
+        }
+    }
+
+    &__link {
+        @include sub-menu;
+        margin: 75px 0px 0px 230px;
+
+    }
+
+    &__search {
+        @include sub-menu;
+        margin: 25px 0px 0px 230px;
+    }
+
+    &__blog {
+        @include sub-menu;
+        margin: 20px 0px 0px -10px;
+    }
+}
+
+//hero slider
+
+.hero {
+
+    // &__slider {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     height: 76%;
+
+    // }
+
+    &__slid {
+        width: 75%;
+        padding: 190px 0px;
+        text-align: center;
+        border-bottom-right-radius: 600px 25px;
+        border-bottom-left-radius: 600px 25px;
+
+        h3 {
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 5px;
+        }
+
+        p {
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        &-bg--1 {
+            background: linear-gradient(-150deg, rgba(88, 27, 163, 0.8), rgba(28, 156, 219, 0.8)), url(/img/pexels-photo-245132-1920x850.jpeg) no-repeat center / cover;
+
+        }
+
+        &-bg--2 {
+            background: linear-gradient(-150deg, rgba(88, 27, 163, 0.8), rgba(28, 156, 219, 0.8)), url(/img/pexels-photo-356056-1920x850.jpeg) no-repeat center / cover;
+
+        }
+    }
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50%;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    font-size: 25px;
+    color: $vdark-gray;
+    cursor: pointer;
+    background: $bg-arrowslid;
+
+    :hover {
+        background: $bghover-arrowslid;
+        line-height: 36px;
+        line-height: 7px;
+        padding: 14px;
+    }
+}
+
+.prev {
+    right: 0;
+}
+
+.next {
+    left: 0;
+}
+
+.dots-hero {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 10px;
+        font-size: 22px;
+        color: $white;
+        cursor: pointer;
+
+        &.slick-active{
+            color: $blue-vivaid;
+        }
+    }
+}
+
+
+.btn-hero {
+    border: 3px solid $bg-arrowslid;
+    background-color: $bghover-arrowslid;
+
+    :hover  {
+        border-radius: 40px;
+        background: $blue-vivaid;
+        color: $white;
+        transition: all ease 0.4s;
+    }
+    a{
+    color:$dark-blue;
+    padding: 10px 35px;
+    
+    }   
+}
+

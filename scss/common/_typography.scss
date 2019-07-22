@@ -1,0 +1,60 @@
+//typography
+
+body {
+    font-family: $chivo;
+    color: $dark-gray;
+
+    h2 {
+        display: inline-flex;
+        position: relative;
+        color: #363636;
+        font-family: 'Chivo', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.3;
+        padding: 0px 70px;
+        
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 50px;
+            border: 2px solid $blue-vivaid;
+
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 20px;
+            width: 50px;
+            border: 2px solid $blue-vivaid;
+        }
+    }
+
+    h4 {
+        color: $vdark-gray;
+        font-size: 20px;
+        font-weight: 400
+    }
+}
+
+//navigation
+.top-nav {
+    font-family: $chivo;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.nav__item {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sub-menu__item {
+    font-size: 13px;
+    font-weight: 400;
+}

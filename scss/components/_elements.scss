@@ -1,0 +1,54 @@
+// ELEMENTS
+
+// btn
+
+.btn {
+    display: inline-flex;
+    font-family: $chivo;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 40px;
+    text-transform: uppercase;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+// btn-up
+
+.btn-up {
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -50px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    color: $white;
+    background: $blue-vivaid;
+    font-size: 20px;
+    clip-path: circle(50% at 50% 50%);
+    cursor: pointer;
+    z-index: 120;
+    transition: all 0.4s;
+
+    &:hover {
+        background: $white;
+        color: $blue-vivaid;
+    }
+}
+
+.active-scroll {
+    bottom: 20px;
+}
